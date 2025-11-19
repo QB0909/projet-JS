@@ -1,5 +1,7 @@
 import Navbar from "./components/Navbar";
 import CvEntry from "./components/CvEntry";
+import Image from "next/image";
+import imageWeb from "./image/imageweb.jpg";
 
 export default function Home() {
   return (
@@ -8,7 +10,7 @@ export default function Home() {
 
       <main className="container mx-auto px-6 py-12">
         <header className="mb-8">
-          <h1 className="text-4xl font-bold">Jean Dupont</h1>
+          <h1 className="text-4xl font-bold">Quentin zedong</h1>
           <p className="text-slate-600">Etudiant à l'Ecam— Bruxelles</p>
         </header>
 
@@ -41,3 +43,4 @@ export default function Home() {
     </div>
   );
 }
+          <Image src={imageWeb} alt="image web" width={48} height={48} className="rounded" />

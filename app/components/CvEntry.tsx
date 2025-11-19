@@ -12,7 +12,7 @@ export default function CvEntry(props: CvEntryProps) {
         <span className="text-slate-500">{props.date}</span>
       </div>
 
-      <p className="mt-2 text-slate-600 whitespace-pre-line">
+      <p className="mt-2 text-slate-600 whitespace-pre-line">   //whitespace pour rajouter des sauts de ligne
         {props.description}
       </p>
     </div>

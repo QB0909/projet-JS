@@ -2,12 +2,40 @@ import Navbar from "./components/Navbar";
 import CvEntry from "./components/CvEntry";
 import Image from "next/image";
 import imageWeb from "./image/imageweb.jpg";
+import { createTask, getTasks,deleteTask } from './lib/tasks' //on importe de lib task
 
-export default function Home() {
-  return (
+export default async function Home() {
+  const tasks = await getTasks()
+  return ( // form fais un formulaire 
+    <>
+      <form action={createTask}>  
+        <label>
+          New task: <input name="title" />
+        </label>
+        <button>Submit</button>
+      </form>
+      <ul>
+        {tasks.map((task, id) => (  //tasks est un tableau d’objets. VOIR EXPLICATION LABO 2
+        <li key={id}>
+          {task.title}
+          
+          <form action={deleteTask.bind(null, id)}> 
+            <button type="submit">Delete task</button>
+          </form>
+        </li>
+        ))}
+      </ul>
+    
+
+
+
     <div className="min-h-screen bg-zinc-50 dark:bg-black">
       <Navbar />
-
+      <div className="flex justify-evenly space-x-4 mt-2">
+          <div className="h-16 w-16 rounded-full bg-blue-500"></div>
+          <div className="h-16 w-16 rounded-full bg-orange-500"></div>
+          <div className="h-16 w-16 rounded-full bg-green-500"></div>
+      </div>
       <main className="container mx-auto px-6 py-12">
         <header className="mb-8">
           <h1 className="text-4xl font-bold">Quentin zedong</h1>
@@ -15,7 +43,7 @@ export default function Home() {
         </header>
 
         <section>
-          <h2 className="text-2xl font-semibold mb-4">Expériences</h2>
+          <h2 className="text-2xl font-semibold mb-4">Expériences</h2> 
 
           <CvEntry
             title="professeur de stage"
@@ -41,6 +69,6 @@ export default function Home() {
         </section>
       </main>
     </div>
+    </>
   );
 }
-          <Image src={imageWeb} alt="image web" width={48} height={48} className="rounded" />

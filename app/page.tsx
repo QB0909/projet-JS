@@ -6,7 +6,7 @@ import { createTask, getTasks,deleteTask } from './lib/tasks' //on importe de li
 
 export default async function Home() {
   const tasks = await getTasks()
-  return ( // form fais un formulaire 
+  return ( // form fais un formulaire  
     <>
       <form action={createTask}>  
         <label>
@@ -29,8 +29,9 @@ export default async function Home() {
 
 
 
-    <div className="min-h-screen bg-zinc-50 dark:bg-black">
-      <Navbar />
+    <div className="min-h-screen bg-zinc-50 dark:bg-black"> 
+      <Navbar /> 
+
       <div className="flex justify-evenly space-x-4 mt-2">
           <div className="h-16 w-16 rounded-full bg-blue-500"></div>
           <div className="h-16 w-16 rounded-full bg-orange-500"></div>

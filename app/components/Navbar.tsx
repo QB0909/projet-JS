@@ -1,3 +1,5 @@
+
+//ajoute la barre de navigation CV et ACCUEIL
 import Link from "next/link";
 import {type ReactNode} from "react";
 
@@ -19,7 +21,8 @@ export default function Navbar() {
         <nav className="bg-slate-600 text-slate-50 shadow-xl">
             <ul className="container mx-auto flex">
                 <NavLink href="/">Accueil</NavLink>
-                <NavLink href="/cv">CV</NavLink>
+                <NavLink href="/cvprout">CV</NavLink>
+                <NavLink href="/vin">vin</NavLink>
             </ul>
         </nav>
     );

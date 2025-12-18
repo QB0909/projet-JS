@@ -18,38 +18,28 @@ export default function CVPage() {
       <div className="container mx-auto px-6 py-12">
         <div className="bg-white/80 dark:bg-black/60 p-6 rounded-lg">
           <main>
-        <header className="mb-8">
-          <h1 className="text-4xl font-bold">CV — Quentin zedong</h1>
-          <p className="text-slate-600">Résumé, expériences et formation</p>
-        </header>
+            <header className="mb-8">
+              <h1 className="text-4xl font-bold">À Propos de Moi</h1>
+              <p className="text-slate-600">Bienvenue sur ma page personnelle.</p>
+            </header>
 
+            <section className="mb-8">
+              <h2 className="text-2xl font-semibold mb-4">Mon Histoire</h2>
+              <p className="text-slate-700 whitespace-pre-line">
+                Je suis un développeur passionné par la création d'expériences web interactives et performantes.
+                Mon parcours m'a amené à explorer diverses technologies, allant du développement frontend avec React
+                aux bases de données et aux architectures backend.
+                J'aime résoudre des problèmes complexes et apprendre de nouvelles choses chaque jour.
+              </p>
+            </section>
 
-        <section>
-          <h2 className="text-2xl font-semibold mb-4">Expériences</h2>
-
-          <CvEntry
-            title="Professeur de stage"
-            date="2023 — Présent"
-            description="Moniteur de stage de tennis pendant les vacances scolaires."
-          />
-
-          <CvEntry
-            title="Stagiaire observateur"
-            date="2025"
-            description="Stage chez e-peas — expérience d'observation et apprentissage en entreprise."
-          />
-        </section>
-
-        <section>
-          <h2 className="text-2xl font-semibold mb-4 mt-8">Éducation</h2>
-
-          <CvEntry
-            title="Licence Informatique"
-            date="2019 — 2022"
-            description={"Université libre de Bruxelles — spécialité informatique\net Ecam — spécialité électro"}
-          />
-        </section>
-
+            <section>
+              <h2 className="text-2xl font-semibold mb-4">Contact</h2>
+              <p className="text-slate-700">
+                Vous pouvez me contacter via email à <a href="mailto:votre.email@example.com" className="text-blue-600 hover:underline">votre.email@example.com</a>
+                ou me trouver sur LinkedIn.
+              </p>
+            </section>
           </main>
 
           <div className="mt-8">

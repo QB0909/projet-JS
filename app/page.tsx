@@ -39,7 +39,7 @@ export default async function Home() {
       </div>
       <main className="container mx-auto px-6 py-12">
         <header className="mb-8">
-          <h1 className="text-4xl font-bold">Quentin zedong</h1>
+          <h1 className="text-4xl font-bold">Quentin BUI</h1>
           <p className="text-slate-600">Etudiant à l'Ecam— Bruxelles</p>
         </header>
 

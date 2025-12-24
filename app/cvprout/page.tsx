@@ -14,7 +14,9 @@ export default function CVPage() {
         backgroundRepeat: 'no-repeat',
       }}
     >
-      <Navbar />
+{/* container rend adaptif la taille et mx auto elle centre  */}
+      
+      <Navbar />   
       <div className="container mx-auto px-6 py-12">
         <div className="bg-white/80 dark:bg-black/60 p-6 rounded-lg">
           <main>
